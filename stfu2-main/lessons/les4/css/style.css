@@ -1,0 +1,43 @@
+
+.firstb {
+    max-width: 500px;
+    margin: 0 0 30px;
+}
+
+.second {
+    display: block;
+}
+
+.third {
+    display: inline-block;
+    margin: 0 0 30px;
+}
+
+.fourth {
+   margin: 0 0 15px;
+    min-height: 100px;
+}
+
+.fiveth {
+    display: inline;
+}
+
+.sixth {
+    padding: 0 0 0 30px;
+    display: inline-block;
+}
+
+.seventh {
+    padding: 20px;
+    margin: 0 20px 0;
+    display: inline-block
+}
+
+.eighth {
+    padding-right: 30px;
+}
+
+.last {
+    display: block;
+    padding: 30px 0;
+}
