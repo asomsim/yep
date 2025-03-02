@@ -13,16 +13,16 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1070px){
     .notforsmall {
-        display: inline-block;
+        /* display: inline-block; */
         position: fixed;
         top: 0;
         left: 0;
         z-index: 4;
-        min-width: 100vw;
-        min-height: 100vh;
-        background-color: gray;
+        width: 100%;
+        min-height: 100%;
+        background-color: #252525;
         color: red;
         text-align: center;
         font-size: 33px;
@@ -42,11 +42,11 @@ a:hover {
     max-width: 1180px;
     margin: auto;
     margin-top: 4vmin;
-    transition: all 0.3s;
+    /* transition: all 0.16s; */
 }
 
 .main:hover {
-    scale: 1.05;
+    /* scale: 1.05; */
 }
 
 .welcome {
@@ -54,8 +54,15 @@ a:hover {
     left: 100%;
     z-index: -1;
     display: inline-block;
-    line-height: 150px;
+    margin-bottom: 50px;
+    /* line-height: 150px; */
     /* padding-left: 120%; */
+}
+
+.welcome p{
+    text-align: center;
+    margin-top: -15px;
+    font-size: 12px;
 }
 
 ol {
@@ -95,70 +102,94 @@ h1 {
     opacity: .2;
 } */
 
+.backto{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .tooltip {
     text-align: center;
     margin-bottom: 5%;
 }
 
-.tooltips a {
-    display: none;
-    padding: 1%;
-    font-size: 50px;
-    transition: outline 0.0667s;
+.tooltip p{
+    font-size: 12px;
+    opacity: .5;
+}
+
+.body_tooltip{   
+     /* margin-bottom: 30px; */
+    background-image: url("/img/puyoart2.jpg");
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: -12rem;
+    background-repeat: no-repeat;
+    background-size: 540px;
+}
+.body_tooltip a {
+    /* display: none; */
+    padding: 1.2% 1%;
+    background-color: rgba(0, 0, 0, 0.492);
+    font-size: 70px;
+    /* transition: outline 0.0667s; */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 900;
     color: white;
 }
 
-.tooltips a:hover {
-    transform: translate(0 0);
-    border: 3px dashed grey;
+.body_tooltip a div{
+    text-shadow: 0px 0px 15px #000000;
 }
 
-.tooltips div {
+.body_tooltip a:hover {
+    /* transform: translate(0 0); */
+    /* border: 3px dashed grey; */
+}
+
+.body_tooltip div {
     display: inline-block;
     transition: all 0.3s 0.222s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.tooltips div.p {
+.body_tooltip div.p {
     color: greenyellow;
     /* text-shadow: 3px 0 greenyellow; */
     animation: puyo infinite 2s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0.2s;
 }
 
-.tooltips div.p:hover {
+.body_tooltip div.p:hover {
     transform: translateY(-50px);
 }
 
-.tooltips div.u {
+.body_tooltip div.u {
     color: blue;
     /* text-shadow: 3px 0 blue; */
     animation: puyo infinite 2s cubic-bezier(0.86, 0, 0.07, 1) 0.1s;
 }
 
-.tooltips div.u:hover {
+.body_tooltip div.u:hover {
     transform: translateY(-50px);
 }
 
-.tooltips div.y {
+.body_tooltip div.y {
     color: yellow;
     /* text-shadow: 3px 0 yellow; */
     animation: puyo infinite 2s ease-in;
 }
 
-.tooltips div.y:hover {
+.body_tooltip div.y:hover {
     transform: translateY(-50px);
 }
 
-.tooltips div.o {
+.body_tooltip div.o {
     color: blueviolet;
     /* text-shadow: 3px 0 blueviolet; */
     animation: puyo infinite 2s ease 0.3s;
 }
 
-.tooltips div.o:hover {
+.body_tooltip div.o:hover {
     transform: translateY(-50px);
 }
 
@@ -179,13 +210,17 @@ h1 {
     }
 }
 
-.tooltip p {
+/*1 cool effect */
+.hoverdesc{display: none;}
+
+.hoverdesc > li{
     /* display: inline-block; */
+    color: transparent;
     text-decoration: line-through;
     transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.tooltip p:hover {
+.hoverdesc p:hover {
     color: orange;
 }
 
@@ -204,34 +239,35 @@ h1 {
 .card {
     /* max-width: 400px; */
     /* margin-right: 30px; */
+    outline: #004664 1vh solid;
     overflow: hidden;
-    border-radius: 15%;
+    border-radius: 10%;
 }
 
-.card a:hover {
-    /* text-decoration: none; */
-    /* color: orange; */
-}
+/* .card a:hover & .card__header p:hover { */
+    /* text-decoration: none;
+    color: orange; */
+    /* opacity: .66;
+} */
 
 .card__header {
-    background: linear-gradient(115.11deg, #9021AC 16.38%, #C8459F 84.56%);
     /* border-radius: 5px; */
-
+    background: linear-gradient(115.11deg, #9021AC 16.38%, #C8459F 84.56%);
 }
 
-.card__header {
-    background-color: gray;
+.card__header:hover{
+    opacity: .86;
 }
 
 .card__header p {
-    padding: 1em;
+padding: 1em;
     margin: 0;
 }
 
 .card img {
     height: 230px;
     width: 100%;
-    transition: all 0.3s;
+    transition: all 0.2s;
     /* object-fit: contain; */
 }
 
@@ -239,13 +275,38 @@ h1 {
     opacity: .66;
 }
 
-.card__link {
+.card__link a{
     transition: all 0.3s;
 }
 
-.card__link:hover {
+.card__link a:hover {
     opacity: .66;
+    /* animation: marquee2 2s linear infinite; */
 }
+
+    @keyframes marquee2{
+        14%{
+            background-color: red;
+        }
+        28%{
+            background-color: yellow;
+        }
+        43%{
+            background-color: green;
+        }
+        57%{
+            background-color: blue;
+        }
+        72%{
+            background-color: purple;
+        }
+        100%{
+            background-color: #fff;
+        }
+        86%{
+        background-color: black;
+        }
+    }
 
 .card__link a {
     display: block;

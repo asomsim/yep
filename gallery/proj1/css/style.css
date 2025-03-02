@@ -12,10 +12,10 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 4;
-        min-width: 100vw;
-        min-height: 100vh;
-        background-color: gray;
+        z-index: 44;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: #252525;
         color: red;
         text-align: center;
         font-size: 33px;
@@ -92,13 +92,13 @@ header {
     align-items: center;
 }
 
-.cup__logo {
+/* .cup__logo {
     transition: scale 0.3s;
 }
 
 .cup__logo:hover {
     scale: .95;
-}
+} */
 
 .cup__nav ul {
     line-height: 24px;
