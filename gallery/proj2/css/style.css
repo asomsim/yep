@@ -65,7 +65,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
 a:hover {
@@ -134,6 +134,7 @@ nav a:hover {
 }
 
 .btn {
+    display: block;
     /* outline: dotted; */
     text-align: center;
     /*    padding: 10px;*/
@@ -144,24 +145,21 @@ nav a:hover {
 }
 
 
-.btn_grey {    
+.btn_grey {
     background-color: inherit;
     border: 1px solid white;
 }
 
-.header__login {}
-
 .work {
     margin-top: 75px;
+    margin-bottom: 300px;
 }
-
-.work__title {}
 
 .txtblock {
     margin-bottom: 60px;
 }
 
-.txtblock > div {
+.txtblock>div {
     margin: 30px auto;
     text-align: center;
 }
@@ -173,7 +171,7 @@ nav a:hover {
     /*line-height: 88px;  110% */
 }
 
-.txtblock__title h1{
+.txtblock__title h1 {
     font-size: 70px;
     font-weight: 500;
 }
@@ -198,15 +196,15 @@ nav a:hover {
 
 .work__image {
     margin: 0 -22vw;
-    height: 52vw;
+    /* height: 52vw; */
 }
 
 .work__image::after {
-    content: "shit";
+    content: "kek";
     display: block;
     scale: 30;
     margin-top: -12vw;
-    background-image:linear-gradient(180deg, transparent, rgba(20,20,20,1) 80%)
+    background-image: linear-gradient(180deg, transparent, rgba(20, 20, 20, 1) 80%)
 }
 
 .work__image img {
@@ -218,104 +216,180 @@ nav a:hover {
 }
 
 
+.features {
+    margin-bottom: 120px;
+}
 
-.features__title {
-    
+.features__title h2 {
+    text-transform: uppercase;
 }
-.features__title h2{
-    text-transform:uppercase;
-}
+
 .features__content {
     display: flex;
-    gap: 50px;
-    margin-bottom: 90px;
+    gap: 3.125rem;
 }
+
 .features__pictures {
     position: relative;
 }
-.f__pic {
-}
+
 .f__pic2 {
     position: absolute;
     bottom: -35px;
     right: -25px;
 }
+
 .features__row {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.rows__item {
-}
+
 .item {
-    
+    padding: 10px;
 }
+
 .item__title {
     font-weight: 500;
+    margin-bottom: 10px;
 }
-.item__text {
+
+.item__title img {
+    padding: 0 10px 10px 0;
 }
+
+
 .contents {
+    margin-bottom: 100px;
 }
-.contents__title {
-}
-.txtblock {
-}
-.txtblock__title {
-}
-.txtblock__text {
-}
+
 .contents__cards {
+    display: flex;
+    gap: 3.125rem;
 }
-.c__card {
-}
+
 .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #787878;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.25rem;
 }
+
 .card__header {
+    color: #181818;
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-bottom: 30px;
 }
+
 .card__text {
+    flex: 1 1 6.25rem;
+    color: #5c5c5c;
+    width: 330px;
+    line-height: 1.5rem;
+    font-size: 1.275rem;
 }
-.card__btn {
-}
+
 .card__img {
+    margin-top: 20px;
 }
+
+
+
 .gallery {
+    margin-bottom: 100px;
 }
-.gallery__title {
-}
+
+.wrapper {}
+
+.gallery__title {}
+
 .gallery__show {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
 }
-.gallery__btn {
+
+.gallery__pic {
+    /* flex: 1 1 25%; */
 }
+.gallery__pic img{
+    border-radius: 16px;
+}
+
+.gallery__btn a{
+    margin: 30px auto 0;
+}
+
+
+
 .partners {
+    margin-bottom: 100px;
 }
 .partners__title {
 }
 .partners__icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 100px;
 }
-.partners__btn {
+.partner_ico a{
+    display: inline-block;
+    padding: 10px;
 }
+
+
+
 .testimonials {
+    margin-bottom: 100px;
 }
-.testimonials__title {
-}
+
+.testimonials__title {}
+
 .testimonials__fb {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 15px;
 }
-.fb__card {
+
+.feedback__card {
 }
+
 .fbcard {
+    flex: 1 1 48%;
+    border-radius: 10px;
+    border: lightgray 1.5px solid;
+    padding: 30px ;
+}
+
+.fbcard__main {
+    display: flex;
 }
 .fbcard__char {
 }
-.fbcard__text {
+.fbcard__about{
+
 }
-.tryit {
+.fbcard__name {
 }
-.tryit__block {
+.fbcard__job {
 }
-.tryit__text {
-}
-.tryit__btn {
-}
-.tryit__pic {
-}
+
+.fbcard__text {}
+
+
+
+.tryit {}
+
+.tryit__block {}
+
+.tryit__text {}
+
+.tryit__btn {}
+
+.tryit__pic {}
