@@ -63,7 +63,6 @@ button::-moz-focus-inner {
 a,
 a:visited {
     text-decoration: none;
-    color: #000;
 }
 
 ul li {
@@ -84,6 +83,10 @@ h6 {
     font-weight: 400;
 }
 
+
+:root {
+    --bg-color: radial-gradient(circle at center, rgba(235, 153, 49, 0.79) 0%, rgba(235, 153, 49, 1) 100%);
+}
 
 a:hover {
     text-decoration: underline
@@ -107,6 +110,10 @@ body {
     display: flex;
     gap: 6.25rem;
     height: 8.75rem;
+}
+
+.header__content a {
+    color: #000;
 }
 
 @media (max-width: 800px) {
@@ -154,7 +161,7 @@ body {
 
 
 .welcome {
-    background-image: radial-gradient(circle at center, rgba(235, 153, 49, 0.79) 0%, rgba(235, 153, 49, 1) 100%);
+    background-image: var(--bg-color);
     width: 100%;
     margin-bottom: 75px;
 }
@@ -185,6 +192,7 @@ body {
     width: 210px;
     height: 50px;
     /* line-height: 20px; */
+    color: #000;
     text-align: center;
     background-color: whitesmoke;
     padding: 15px;
@@ -242,7 +250,7 @@ h2 {
 
 .production__box {
     display: flex;
-    background-image: radial-gradient(circle at center, rgba(235, 153, 49, 0.79) 0%, rgba(235, 153, 49, 1) 100%);
+    background-image: var(--bg-color);
     border-radius: 18px;
     /* gap: 10px; */
 }
@@ -410,6 +418,7 @@ h4.title {
     /* height: 260px; */
     margin-block: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
 .modal img {
@@ -597,7 +606,7 @@ img.hover-shadow {
 
 
 h2~h3 {
-    margin: -5vh 0 6vh;
+    margin: -5% 0 6%;
 }
 
 .regrinding {
@@ -618,7 +627,7 @@ h2~h3 {
 
 .card {
     width: 50%;
-    background-image: radial-gradient(circle at center, rgba(235, 153, 49, 0.79) 0%, rgba(235, 153, 49, 1) 100%);
+    background-image: var(--bg-color);
     padding: 20px;
 }
 
@@ -687,7 +696,8 @@ h2~h3 {
     .regrinding {
         margin-bottom: 50px;
     }
-    h3{ 
+
+    h3 {
         padding: 0 10px;
         font-size: 1.875rem;
     }
@@ -699,37 +709,81 @@ h2~h3 {
 }
 
 .rods__box {
-    /* display: none; */
+    padding: 0 20px;
 }
 
 .rods__pic {
     /* width: 80%; */
     margin: 0 auto;
-    background-image: radial-gradient(circle at center, rgba(235, 153, 49, 0.79) 0%, rgba(235, 153, 49, 1)100%);
     border-radius: 10px;
-    padding: 0 .375rem .375rem 0;
+    text-align: center;
 }
 
-.rods__pic img{
+figcaption {
+    display: none;
+}
+
+.rods__pic img {
     max-width: 100%;
     border-radius: 10px;
+    filter: drop-shadow(.375rem .375rem orange);
+    margin-bottom: 1.5625rem;
 }
 
-.rods__desc {}
+.rods__desc {
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-end;
+}
 
-.rods__weird-arrow {}
+.rods__weird-arrow {
+    transform: rotate(26deg);
+    align-self: center;
+}
 
-.rods__stats {}
+.rods__weird-arrow img {
+    width: 200px;
+}
+
+.rods__stats {
+    border-radius: 10px;
+    background-image: var(--bg-color);
+    padding: 20px;
+    width: 60%;
+    height: 260px;
+    line-height: 25px;
+}
+
+.rods__stats p {
+    max-width: 300px;
+    position: absolute;
+}
+
+.rods__stats img {
+    width: 100%;
+    transform: translate(4%, -5%);
+}
+
+@media (max-width:800px) {
+    .rods__desc {
+        display: none;
+    }
+
+    figcaption {
+        display: inherit;
+    }
+}
 
 
 
 
-.contact h2{
+.contact h2 {
     color: #717171;
 }
+
 .contact {
     background-color: #111111;
-    padding: 30px 0 80px;
+    padding: 30px 0 4.5rem;
 }
 
 .contact__box h3,
@@ -740,30 +794,68 @@ h2~h3 {
 
 .contact__content {
     /* margin-top: 20px; */
+    padding: 0 20px;
     display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
 }
 
 .contact__info {
+    /* width: 50%; */
     border-left: orange 5px solid;
 }
-.contact__info li{
-    margin: 15px;
+
+.contact__info li {
+    margin: 1.775rem;
+}
+
+@media (max-width: 550px) {
+    .contact__content {
+        display: block;
+    }
+
+    footer a {
+        padding: 20px 20px 0 20px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
 }
 
 textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
+    /* width: 100%; */
+    height: 100px;
+    /* padding: 12px 20px; */
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
 }
 
-.contact__data {
+.contact__data input,
+.contact__data textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.contact__data input {
     /* display: flex; */
+    /* padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 4px; */
+}
+
+.btn--orange {
+    width: 100%;
+    background-color: orange;
+    border: 0;
+    color: #fff;
 }
 
 .map {}

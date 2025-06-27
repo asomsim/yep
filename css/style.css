@@ -128,7 +128,7 @@ h1 {
 .status span {
     display: block;
     margin: 0;
-    animation: go 16s cubic-bezier(0, 0, 0.2, 1) 0s infinite normal forwards;
+    animation: go 26s cubic-bezier(1, 0, 0.46, 0.53) 2s infinite normal forwards;
 }
 
 @keyframes go {
@@ -344,12 +344,23 @@ h1 {
     opacity: .66;
 }
 
-.card__link a {
+.card__link  p{
+    display: inline;
+}
+.card__link  {
+    display: block;
+    margin-top: 10px;
+    line-height: 40px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    color: initial;
+
     transition: all 0.3s;
 }
 
-.card__link a:hover {
-    opacity: .66;
+.card__link:hover {
+    opacity: .75;
     /* animation: marquee2 2s linear infinite; */
 }
 
@@ -381,15 +392,6 @@ h1 {
     86% {
         background-color: black;
     }
-}
-
-.card__link a {
-    display: block;
-    margin-top: 10px;
-    line-height: 40px;
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
 }
 
 
@@ -461,5 +463,5 @@ ul {
 }
 
 .lessons__js ol {
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
 }

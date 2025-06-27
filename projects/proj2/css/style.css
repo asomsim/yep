@@ -338,9 +338,15 @@ nav a:hover {
     justify-content: space-evenly;
     margin: 0 100px;
 }
+
 .partner_ico a{
     display: inline-block;
     padding: 10px;
+    transition: all 0.3s;
+}
+
+.partner_ico a:hover{
+    scale: 1.1;
 }
 
 
