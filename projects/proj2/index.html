@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>figma</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
+    <header>
         <div class="wrapper">
             <div class="header__container">
                 <a href="#" class="header__logo"><img src="images/logo.png" alt="logo"></a>
@@ -20,12 +21,26 @@
                     <a href="#" class="menu__item">Contact</a>
                 </nav>
                 <a href="#" class="header__login btn_grey btn">Login</a>
+                <div class="burger-menu">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="menu-items">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <section class="section">
-        <div class="wrapper">
-            <div class="work">
+    <section>
+        <div class="work">
+            <div class="wrapper">
                 <div class="work__title txtblock">
                     <div class="txtblock__title">
                         <h1>Work at the speed of thought</h1>
@@ -58,17 +73,15 @@
                     <div class="features__pictures">
                         <div class="f__pic">
                             <img src="images/features.png" alt="features-img">
-                        </div>
-                        <div class="f__pic2">
-                            <img src="images/features2.png" alt="features-img2">
+                            <img class="f__pic2" src="images/features2.png" alt="features-img2">
                         </div>
                     </div>
                     <div class="features__row">
                         <div class="rows__item item">
                             <div class="item__title">
                                 <img src="images/xmark.svg" alt="point">
-                                A single source
-                                of truth
+                                <p>A single source
+                                    of truth</p>
                             </div>
                             <div class="item__text">
                                 When you add work to your Slate calendar we automatically calculate useful insights
@@ -77,8 +90,8 @@
                         <div class="rows__item item">
                             <div class="item__title">
                                 <img src="images/ufo.svg" alt="point">
-                                Intuitive
-                                interface
+                                <p>Intuitive
+                                    interface</p>
                             </div>
                             <div class="item__text">
                                 When you add work to your Slate calendar we automatically calculate useful insights
@@ -87,7 +100,7 @@
                         <div class="rows__item item">
                             <div class="item__title">
                                 <img src="images/inf.svg" alt="point">
-                                Or with rules
+                                <p>Or with rules</p>
                             </div>
                             <div class="item__text">
                                 When you add work to your Slate calendar we automatically calculate useful insights
@@ -135,7 +148,7 @@
                             <a href="#" class=" btn">Try For Free</a>
                         </div>
                         <div class="card__img">
-                            <img style="margin: -30px;" src="images/cardscreen.png" alt="card-img">
+                            <img style="margin: -30px auto;" src="images/cardscreen.png" alt="card-img">
                         </div>
                     </div>
                 </div>
@@ -162,18 +175,64 @@
                     <div class="gallery__pic">
                         <img src="images/card.png" alt="gallery4">
                     </div>
-                    <div class="gallery__pic">
-                        <img src="images/card2.png" alt="gallery5">
-                    </div>
-                    <div class="gallery__pic">
-                        <img src="images/card.png" alt="gallery6">
-                    </div>
-                    <div class="gallery__pic">
-                        <img src="images/card2.png" alt="gallery7">
-                    </div>
+                    <span id="pictures" class="gallery__more__btn">
+                        <div class="gallery__pic">
+                            <img src="images/card2.png" alt="gallery5">
+                        </div>
+                        <div class="gallery__pic">
+                            <img src="images/card.png" alt="gallery6">
+                        </div>
+                        <div class="gallery__pic">
+                            <img src="images/card2.png" alt="gallery7">
+                        </div>
+                        <span id="pictures2" class="gallery__more__btn2">
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery1">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery2">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery3">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery4">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card2.png" alt="gallery5">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery6">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card2.png" alt="gallery7">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery1">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery2">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery3">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery4">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card2.png" alt="gallery5">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card.png" alt="gallery6">
+                            </div>
+                            <div class="gallery__pic">
+                                <img src="images/card2.png" alt="gallery7">
+                            </div>
+                        </span>
+                    </span>
                 </div>
                 <div class="gallery__btn">
-                    <a href="#" class="btn_grey btn" title="DANGER! not finished">See more</a>
+                    <button id="gallery__more" onclick="gallery__more()" class="btn_grey btn">See more</button>
                 </div>
             </div>
         </div>
@@ -220,9 +279,71 @@
                             <img src="images/logos_ibm.svg" alt="logo-ico">
                         </a>
                     </div>
+                    <span id="partners" class="partners__expand">
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_ibm.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_apple.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                        <div class="partner_ico">
+                            <a href="#">
+                                <img src="images/logos_ibm.svg" alt="logo-ico">
+                            </a>
+                        </div>
+                    </span>
                 </div>
-                <div class="gallery__btn" title="DANGER aswell!)">
-                    <a href="#" class="btn_grey btn">All partners</a>
+                <div class="partners__btn">
+                    <button id="partners__more" onclick="partners__more()" class="btn_grey btn">All partners</button>
                 </div>
             </div>
         </div>
@@ -250,21 +371,75 @@
                         <div class="fbcard__text">Slate helps you see how many more days
                             you need to work to reach your financial
                             goal for the month and year. Slate helps
+                            you see how many more days Slate helps
                             you see how many more days
                             you need to work to reach your financial
                             goal for the month and year.your financial
                             goal for the month and year.</div>
                     </div>
                     <div class="feedback__card fbcard">
-                        <div class="fbcard__char">
-                            <img src="images/fb-pic.png" alt="char-pic">
+                        <div class="fbcard__main">
+                            <div class="fbcard__char">
+                                <img src="images/fb-pic.png" alt="char-pic">
+                            </div>
+                            <div class="fbcard__about">
+                                <div class="fbcard__name">
+                                    <p>Clara Sasha</p>
+                                </div>
+                                <div class="fbcard__job">
+                                    <p>Designer</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="fbcard__text">Slate helps you see how many more days
                             you need to work to reach your financial
                             goal for the month and year. Slate helps
                             you see how many more days
                             you need to work to reach your financial
+                            goal for the month and year.your financial
+                            goal for the month and year.</div>
+                    </div>
+                    <div class="feedback__card fbcard">
+                        <div class="fbcard__main">
+                            <div class="fbcard__char">
+                                <img src="images/fb-pic.png" alt="char-pic">
+                            </div>
+                            <div class="fbcard__about">
+                                <div class="fbcard__name">
+                                    <p>Clara Sasha</p>
+                                </div>
+                                <div class="fbcard__job">
+                                    <p>Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fbcard__text">Slate helps you see how many more days
+                            you need to work to reach your financial
+                            goal for the month and year. Slate helps
+                            you see how many more days Slate helps
+                            you see how many more days Slate helps
                             you see how many more days
+                            you need to work to reach your financial
+                            goal for the month and year.your financial
+                            goal for the month and year.</div>
+                    </div>
+                    <div class="feedback__card fbcard">
+                        <div class="fbcard__main">
+                            <div class="fbcard__char">
+                                <img src="images/fb-pic.png" alt="char-pic">
+                            </div>
+                            <div class="fbcard__about">
+                                <div class="fbcard__name">
+                                    <p>Clara Sasha</p>
+                                </div>
+                                <div class="fbcard__job">
+                                    <p>Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fbcard__text">Slate helps you see how many more days
+                            you need to work to reach your financial
+                            goal for the month and year.
                             you need to work to reach your financial
                             goal for the month and year.your financial
                             goal for the month and year.</div>
@@ -274,19 +449,68 @@
         </div>
 
         <div class="tryit">
-            <div class="tryit__block">
-                <div class="tryit__text">OpenType features
-                    and Variable fonts</div>
-                <div class="tryit__btn btn">Try For Free</div>
-            </div>
-            <div class="tryit__pic">
-                <img src="images/tryit.png" alt="try">
+            <div class="wrapper">
+
+                <div class="tryit__block">
+                    <div class="tryit__title">
+                        <div class="tryit__text">OpenType features
+                            and Variable fonts</div>
+                        <a class="tryit__btn btn" href="#">Try For Free</a>
+                    </div>
+                    <div class="tryit__pic">
+                        <img src="images/tryit.png" alt="try">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
 
+    <footer>
+        <div class="wrapper">
+            <div class="footer__block">
+                <div class="footer__nav">
+                    <div class="fingertipe">
+                        <a href="#">Fingertipe</a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="Resources">
+                        <a href="#">Resources</a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="About">
+                        <a href="#">About</a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <a class="contact__loc" href="#"><img src="../proj2/images/1.svg" alt="location">7480 Mockingbird
+                        Hill undefined</a>
+                    <a class="contact__tel" href="#"><img src="../proj2/images/2.svg" alt="tel">(239) 555-0108</a>
+                    <div class="contact__links">
+                        <a href="#"><img src="../proj2/images/3.svg" alt="twitter"></a><a href="#"><img
+                                src="../proj2/images/4.svg" alt="facebook"></a><a href="#"><img
+                                src="../proj2/images/5.svg" alt="in"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="js/js.js"></script>
 </body>
 
 </html>

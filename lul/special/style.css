@@ -1,10 +1,37 @@
 body{
     text-align: center;
+    color: white;
+    height: 300vh;
 }
 
 h1{
+    display: inline-block;
+    width: 18%;
+    border-radius: 20px;
+    background-color: skyblue;
+    padding: 20px;
     text-transform: uppercase;
+
 }
+
+h2{
+    display: none;
+}
+
+
+.sun{
+    --sun:180px;
+    background-color: wheat;
+    border-radius: 50%;
+    width: var(--sun);
+    height: var(--sun);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    box-shadow: inset #e4af3d 0px 0px 50px 10px;
+    /* margin-left: calc(100% - var(--sun)); */
+}
+
 
 .sticky{
     position:fixed;
@@ -15,4 +42,19 @@ h1{
 
 .sticky img{
     height: 100%;
+}
+
+.earth{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.earth img{
+    /* object-fit: cover; */
+    width: 100vw;
+    height: 100vh;
 }

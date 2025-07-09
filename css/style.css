@@ -110,7 +110,7 @@ h1 {
     /* text-align: center; */
     display: flex;
     justify-content: center;
-    height: 1.15rem;
+    height: 1.3rem;
     margin-bottom: 30px;
     user-select: none;
 }
@@ -309,7 +309,7 @@ h1 {
     /* margin-right: 30px; */
     outline: #004664 1vh solid;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: .4%;
 }
 
 .card > a {
@@ -325,10 +325,14 @@ h1 {
 
 .card__header:hover {
     /* opacity: .86; */
-    background-color: #00618a;
+    background-color: #0083bb;
+    .card__body img{
+        opacity: 1;
+    }
 }
 
-.card__header p,.card__header2 p {
+.card__header p,
+.card__header2 p {
     padding: 1em;
     margin: 0;
 }
@@ -340,28 +344,36 @@ h1 {
     /* object-fit: contain; */
 }
 
-.card img:hover {
-    opacity: .66;
+.card > a:hover {
+    .card__header{
+        background-color: #0083bb;
+    }
+    .card__body img{
+        opacity: .66;
+    }
 }
 
-.card__link  p{
-    display: inline;
-}
-.card__link  {
-    display: block;
-    margin-top: 10px;
+.card__link * {
+    display: inline-block;
+    margin: 10px 0 0 0;
     line-height: 40px;
     width: 100%;
     height: 50px;
     background-color: #fff;
-    color: initial;
 
-    transition: all 0.3s;
+    transition: all 0.3s;}
+
+.card__link p{
+    /* display: inline; */
+    color: initial;
+}
+.card__link a{
+    /* display: block; */
 }
 
-.card__link:hover {
-    opacity: .75;
-    /* animation: marquee2 2s linear infinite; */
+.card__link *:hover {
+    /* opacity: .75; */
+    background-color: #70ffc6;
 }
 
 @keyframes marquee2 {
@@ -430,9 +442,11 @@ ul {
 }
 
 .lesson {
-    border: 10px solid rgb(171, 171, 171);
+    cursor: default;
+    border: 1vh solid rgb(171, 171, 171);
     border-radius: 3%;
     padding: 5px 15px;
+    transition: all 0.25s;
 }
 
 .lesson__title {
@@ -441,21 +455,23 @@ ul {
 
 .lesson__title p {
     display: inline-block;
-}
-
-.lesson:hover {
-    border: 10px solid rgb(94, 94, 94);
-    transition: all 0.25s;
-    /*hang on*/
-}
-
-.lesson p {
     text-transform: uppercase;
     font-size: 25px;
 }
 
-.lesson p:hover {
+.lesson__title p:hover {
     color: rgb(255, 98, 98)
+}
+
+.lesson:hover {
+    border: 1vh solid rgb(94, 94, 94);
+    /*hang on*/
+}
+
+.lesson p {
+}
+
+.lesson p:hover {
 }
 
 .lul {
